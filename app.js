@@ -52,5 +52,14 @@ playBtn.addEventListener('click' () => {
 	}
 });
 
+function prevSong() {
+	songIndex--;
+
+	if (songIndex < 0) {
+		songIndex = songs.length - 1
+	}
+
+	loadSong(song[songIndex]);
+}
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
