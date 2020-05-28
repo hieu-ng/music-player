@@ -51,3 +51,6 @@ playBtn.addEventListener('click' () => {
 		playSong();
 	}
 });
+
+prevBtn.addEventListener('click', prevSong);
+nextBtn.addEventListener('click', nextSong);
