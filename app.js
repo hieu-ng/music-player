@@ -61,5 +61,16 @@ function prevSong() {
 
 	loadSong(song[songIndex]);
 }
+
+function nextSong() {
+	songIndex++;
+
+	if (songIndex > songs.length - 1) {
+		songIndex = 0;
+	}
+
+	loadSong(song[songIndex]);
+}
+
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
