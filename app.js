@@ -22,6 +22,16 @@ function loadSong(song) {
 	cover.src = `images/${song}.mp3`;
 }
 
+function playSong() {
+	musicContainer.classList.add('.play');
+	playBtn.querySelector('i.fas')
+		.classList.remove('fa-play');
+	playBtn.querySelector('i.fas')
+		.classList.add('fa-play');
+
+	audio.play();
+}
+
 playBtn.addEventListener('click' () => {
 	const isPlaying = musicContainer.classList.contains('play');
 
