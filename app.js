@@ -8,3 +8,26 @@ const progress = document.getElementById('progress');
 const progressContainer = document.getElementById('progress-container');
 const title = document.getElementById('title');
 const cover = document.getElementById('cover');
+
+const songs = ['hey', 'summer', 'ukelele'];
+
+// Keep tracks of song
+let songIndex = 2;
+
+loadSong(song[songIndex]);
+
+function loadSong(song) {
+	title.innerText = song;
+	audio.src = `music/${song}.mp3`;
+	cover.src = `images/${song}.mp3`;
+}
+
+playBtn.addEventListener('click' () => {
+	const isPlaying = musicContainer.classList.contains('play');
+
+	if (isPlaying) {
+		pauseSong();
+	} else {
+		playSong();
+	}
+});
